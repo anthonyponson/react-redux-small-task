@@ -9,13 +9,12 @@ const Login = () => {
   const [userPassword, setUserPassword] = useState('')
   const [showPopup, setShowPopup] = useState(false)
 
-  // const { state, dispatch } = useContext(stateContext)
   const state = useSelector(({name}) => name)
   const dispatch = useDispatch() 
 
   const navigate = useNavigate()
 
-  const userNameChange = (e) => {
+const userNameChange = (e) => {
     if (e.target.name === 'name') {
       setUserName(e.target.value)
     } else {
@@ -32,7 +31,6 @@ const Login = () => {
     )
     
     if (user) {
-      
       navigate('/form')
     } else {
       setShowPopup(!user)
@@ -81,7 +79,6 @@ const Login = () => {
             className="bg-white-400 p-2 px-6 mt-2 rounded-full mx-2"
             onClick={() =>{
               localStorage.setItem('isLoggedIn', JSON.stringify(true))
-              //  dispatch({ type: 'login', payload: true })
                dispatch((login(true)))
             
             }}

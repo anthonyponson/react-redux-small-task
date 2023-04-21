@@ -1,8 +1,7 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { stateContext } from './Context'
-import { addTask, edit, editTask, tasks } from './stateSlice'
+import { addTask, editTask, tasks } from './stateSlice'
 import { useDispatch } from 'react-redux'
 
 const Form = () => {
@@ -38,7 +37,7 @@ const Form = () => {
       isComplete: checked,
     }
     if (task) {
-      dispatch(editTask([newTask, task.id])) // dispatch editTask action for edited task
+      dispatch(editTask([newTask, task.id])) 
       dispatch(tasks())
     } else {
       dispatch(addTask(newTask))
