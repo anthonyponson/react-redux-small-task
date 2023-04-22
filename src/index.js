@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import stateReducer from './stateSlice'
 import App from './App'
+import './assests/css/index.css'
 
 const store = configureStore({
   reducer: {

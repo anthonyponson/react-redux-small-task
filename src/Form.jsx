@@ -54,15 +54,16 @@ const Form = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={submitHandle}>
-        <input name='name' value={taskName} onChange={sameInput}></input>
-
-        <input name='des' value={taskDes} onChange={sameInput}></input>
+    <div className='flex justify-center items-center h-screen'>
+      <form className='bg-emerald-400 flex flex-col space-y-4 p-6 rounded-lg' onSubmit={submitHandle}>
+        <label className='text-neutral-50'>Task Name</label>     
+        <input className='bg-neutral-100 rounded-full' name='name' value={taskName} onChange={sameInput}></input>
+        <label className='text-neutral-50'>Task Description</label>
+        <input className='bg-neutral-100 rounded-full' name='des' value={taskDes} onChange={sameInput}></input>
 
         <input checked={checked} onChange={checking} type='checkbox'></input>
-        <input type='submit' />
-        <button onClick={() => Home()}>Go To Home</button>
+        <input className='bg-neutral-50 rounded-full py-1  w-8/12 justify-center mx-auto cursor-pointer' type='submit' />
+        <button className='bg-neutral-50 rounded-full py-1 w-8/12 justify-center mx-auto ' onClick={() => Home()}>Go To Home</button>
       </form>
     </div>
   )

@@ -48,7 +48,7 @@ export const stateSlice = createSlice({
   },
 })
 
-export const { login, setForms, edit, addTask, editTask,deleteTask, toggleComplete, tasks } = stateSlice.actions
+export const { login, setForms, addTask, editTask,deleteTask, toggleComplete, tasks } = stateSlice.actions
 
 export default stateSlice.reducer
 
